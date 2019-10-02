@@ -1,0 +1,8 @@
+<resources>
+    <string name="mapbox_access_token">TOKEN</string>
+
+    <string name="app_name">MapboxFragmentTest</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>
