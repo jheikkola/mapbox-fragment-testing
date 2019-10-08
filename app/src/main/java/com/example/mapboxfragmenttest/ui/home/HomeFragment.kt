@@ -34,10 +34,12 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         mapview.onCreate(savedInstanceState)
 
+        val source = CustomGeometrySource("SOURCE_ID", CustomTileProvider())
+
         mapview.getMapAsync() {
             it.setStyle(Style.Builder()
                 .fromUri(MAPBOX_STREETS)
-                .withSource(CustomGeometrySource("SOURCE_ID", CustomTileProvider()))
+                //.withSource(source)  // skipping this causes finalizer crash
             )
         }
     }
